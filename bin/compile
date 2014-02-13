@@ -12,6 +12,7 @@ DOWNLOAD_URL="http://flect.github.io/heroku-binaries/libs/ffmpeg.tar.gz"
 echo "DOWNLOAD_URL = " $DOWNLOAD_URL | indent
 
 cd $BUILD_DIR
+./configure --enable-gpl --enable-liba52 --enable-libgsm --enable-libxvid --enable-libamr_nb --enable-libamr_wb --enable-libmp3lame --enable-libogg --enable-libvorbis --enable-libfaac --enable-libfaad --enable-shared
 mkdir -p $VENDOR_DIR
 cd $VENDOR_DIR
 curl -L --silent $DOWNLOAD_URL | tar xz
